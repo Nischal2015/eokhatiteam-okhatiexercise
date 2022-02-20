@@ -34,6 +34,10 @@ function App() {
   return (
     <Container maxWidth='md' sx={{ marginTop: "3.2rem" }}>
       {alert && <AlertStatus />}
+      <Link to='/' style={{ fontSize: "1.8rem" }}>
+        Home
+      </Link>{" "}
+      {""} | {""}
       <Link to='/dashboard' style={{ fontSize: "1.8rem" }}>
         Dashboard
       </Link>{" "}
