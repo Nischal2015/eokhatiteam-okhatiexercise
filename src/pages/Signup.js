@@ -5,7 +5,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import LinearProgress from "@mui/material/LinearProgress";
-import img from "../assets/okhati2.png";
+import img from "../assets/okhati2.webp";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
