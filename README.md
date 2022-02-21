@@ -25,8 +25,8 @@ $ npm start
 $ npm run build
 ```
 
-Material UI is used for making the UI components. Check out <a href="https://mui.com/" target="_blank">Material UI</a> for more information
+Material UI is used for making the UI components. Check out [Material UI](https://mui.com/) for more information
 
 ## Demo
 
-[Check it live!](https://nischal-eokhati.netlify.app/){:target="\_blank" rel="noopener"}
+[Check it live!](https://nischal-eokhati.netlify.app/)
