@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
+  const email = useSelector((state) => state.auth.email);
   return (
     <Container>
-      <Typography sx={{ fontSize: "1.6rem" }}>
-        This is the private page which can only be visited once you log in using
-        your account.
+      <Typography variant='h1' component='h1'>
+        Welcome {email}
       </Typography>
     </Container>
   );
