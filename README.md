@@ -9,7 +9,7 @@ Note: This project was bootstrapped with [Create React App](https://github.com/f
 - All the necessary packages are already specified in the package.json
 - Install all necessary packages using `npm install` inside the root directory.
 
-```sh
+```
 $ npm install
 ```
 
