@@ -25,7 +25,7 @@ $ npm start
 $ npm run build
 ```
 
-Material UI is used for making the UI components. Check out [Material UI](https://mui.com/) for more information
+Material UI is used for making the UI components. Check out [Material UI](https://mui.com/) for more information  
 Firebase is used for backend. Check out [Fireabase](https://firebase.google.com/docs/) for more information.
 
 ## Demo
