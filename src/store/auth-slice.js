@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 let user = localStorage.getItem("email");
-console.log(user);
 
 const initialState = user
   ? { isLogging: false, loggedIn: true, user, isRegistering: false }
