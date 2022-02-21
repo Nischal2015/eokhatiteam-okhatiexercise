@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 const auth = getAuth(app);
 
+// Login functionality
 export const login =
   ({ email, password }, callback) =>
   async (dispatch) => {
@@ -24,6 +25,7 @@ export const login =
     }
   };
 
+// Signup functionality
 export const signup =
   ({ email, password }, registerStatusHandler) =>
   async (dispatch) => {
@@ -41,6 +43,7 @@ export const signup =
     }
   };
 
+// Logout Functionality
 export const logout = () => async (dispatch) => {
   try {
     await signOut(auth);
