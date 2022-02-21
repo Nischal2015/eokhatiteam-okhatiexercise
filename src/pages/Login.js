@@ -44,11 +44,7 @@ const Login = () => {
     email: Yup.string().required("Email is required").email("Email is invalid"),
     password: Yup.string()
       .min(8, "Password must be at least 8 characters")
-      .required("Password is required")
-      .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
-        "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-      ),
+      .required("Password is required"),
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
   const isLogging = useSelector((state) => state.auth.isLogging);
