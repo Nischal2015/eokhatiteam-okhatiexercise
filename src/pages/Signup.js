@@ -56,6 +56,7 @@ const Signup = () => {
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
   const isRegistering = useSelector((state) => state.auth.isRegistering);
+  const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   const [registerSuccess, setRegisterSuccess] = useState(false);
 
@@ -68,6 +69,10 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm(formOptions);
+  if (user) {
+    return <Navigate to='/dashboard' replace={true} />;
+  }
+
   return (
     <React.Fragment>
       {isRegistering && <LinearProgress sx={{ height: ".6rem" }} />}

@@ -1,0 +1,21 @@
+.alert {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  animation: slideFromRight 3s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes slideFromRight {
+  5% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

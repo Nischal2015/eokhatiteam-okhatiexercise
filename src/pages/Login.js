@@ -22,7 +22,7 @@ import {
   Paragraph,
 } from "../components/styles";
 import { Typography } from "@mui/material";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const Img = styled("img")({
   width: "170%",
@@ -52,6 +52,7 @@ const Login = () => {
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
   const isLogging = useSelector((state) => state.auth.isLogging);
+  const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   let navigate = useNavigate();
   let location = useLocation();
@@ -61,6 +62,11 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm(formOptions);
+
+  if (user) {
+    return <Navigate to='/dashboard' replace={true} />;
+  }
+
   return (
     <React.Fragment>
       {isLogging && <LinearProgress sx={{ height: ".6rem" }} />}
@@ -126,6 +132,7 @@ const Login = () => {
               </Grid>
             </Grid>
             <Button
+              disabled={isLogging}
               type='submit'
               variant='contained'
               size='large'

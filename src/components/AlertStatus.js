@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { alertActions } from "../store/alert-slice";
 import { Typography } from "@mui/material";
 
+import styles from "./AlerStatus.module.scss";
+
 const AlertStatus = () => {
   const alertType = useSelector((state) => state.alert.alertType);
   const message = useSelector((state) => state.alert.message);
@@ -17,11 +19,7 @@ const AlertStatus = () => {
       variant='filled'
       severity={alertType}
       onClose={closeAlertHandler}
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        position: "fixed",
-      }}
+      className={styles.alert}
     >
       <Typography sx={{ fontSize: "1.4rem" }}>{message}</Typography>
     </Alert>

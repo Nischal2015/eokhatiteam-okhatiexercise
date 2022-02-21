@@ -12,17 +12,17 @@ export const Router = () => {
     <Routes>
       <Route path='/' element={<App />}>
         <Route index element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
+        <Route
+          path='dashboard'
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        />
       </Route>
-      <Route
-        path='dashboard'
-        element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>
-        }
-      />
     </Routes>
   );
 };
